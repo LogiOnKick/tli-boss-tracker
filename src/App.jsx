@@ -252,6 +252,7 @@ export default function App() {
 
       <footer className="bg-gray-800 p-4 text-center text-gray-500 text-sm">
         <p>&copy; Logi TLI Boss Tracker - May 2025</p>
+        <Analytics />
       </footer>
     </div>
   );
