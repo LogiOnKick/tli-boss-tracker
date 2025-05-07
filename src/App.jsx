@@ -652,8 +652,8 @@ const ProfitCalculator = () => {
     keyCost: 14,
     dropValue: 52,
     dropRate: 50,
-    runsPerHour: 20,
-    numberOfRuns: 100,
+    runsPerHour: 80,
+    numberOfRuns: 80,
     marketTax: 12.5,
   };
   const [calc, setCalc] = useState(() => loadState("profitCalculatorState", initialCalcState));
