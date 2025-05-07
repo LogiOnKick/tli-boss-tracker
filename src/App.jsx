@@ -13,6 +13,7 @@ import {
   TrendingUp,
   GitCompareArrows,
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 /* Additional CSS for the app */
 const globalStyles = `
