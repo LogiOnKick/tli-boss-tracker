@@ -1029,7 +1029,7 @@ function StratEfficiencyCalculator() {
   const [strat1, setStrat1] = useState(() =>
     loadState("strat1Data", {
       ...initialStratState,
-      name: "Strategy 1",
+      name: "3 Key Keegan",
       keyCost: 13.5,
       dropChance: 50,
       dropValue: 48,
@@ -1039,7 +1039,7 @@ function StratEfficiencyCalculator() {
   const [strat2, setStrat2] = useState(() =>
     loadState("strat2Data", {
       ...initialStratState,
-      name: "Strategy 2",
+      name: "4 Key Keegan Uber",
       keyCost: 31.5,
       dropChance: 100,
       dropValue: 48,
@@ -1117,27 +1117,31 @@ function StratEfficiencyCalculator() {
     if (metrics1.profitPerHour !== metrics2.profitPerHour) {
       const difference = Math.abs(metrics1.profitPerHour - metrics2.profitPerHour);
       if (metrics1.profitPerHour > metrics2.profitPerHour) {
-        comparisonResult = `${strat1.name || "Strategy 1"} is ${difference.toFixed(1)} FE/hr more profitable.`;
+        comparisonResult = `${strat1.name || "3 Key Keegan"} is ${difference.toFixed(1)} FE/hr more profitable.`;
         if (metrics2.netProfitPerRun > 0) {
           const targetRPH2 = metrics1.profitPerHour / metrics2.netProfitPerRun;
           if (isFinite(targetRPH2) && targetRPH2 > 0) {
-            targetRphInfo = `${strat2.name || "Strategy 2"} would need approx. ${targetRPH2.toFixed(1)} RPH to match.`;
+            targetRphInfo = `${strat2.name || "4 Key Keegan Uber"} would need approx. ${targetRPH2.toFixed(
+              1
+            )} RPH to match.`;
           }
         } else if (metrics1.profitPerHour > 0) {
           targetRphInfo = `${
-            strat2.name || "Strategy 2"
+            strat2.name || "4 Key Keegan Uber"
           } is currently not profitable per run, cannot match by increasing RPH.`;
         }
       } else {
-        comparisonResult = `${strat2.name || "Strategy 2"} is ${difference.toFixed(1)} FE/hr more profitable.`;
+        comparisonResult = `${strat2.name || "4 Key Keegan Uber"} is ${difference.toFixed(1)} FE/hr more profitable.`;
         if (metrics1.netProfitPerRun > 0) {
           const targetRPH1 = metrics2.profitPerHour / metrics1.netProfitPerRun;
           if (isFinite(targetRPH1) && targetRPH1 > 0) {
-            targetRphInfo = `${strat1.name || "Strategy 1"} would need approx. ${targetRPH1.toFixed(1)} RPH to match.`;
+            targetRphInfo = `${strat1.name || "3 Key Keegan"} would need approx. ${targetRPH1.toFixed(
+              1
+            )} RPH to match.`;
           }
         } else if (metrics2.profitPerHour > 0) {
           targetRphInfo = `${
-            strat1.name || "Strategy 1"
+            strat1.name || "3 Key Keegan"
           } is currently not profitable per run, cannot match by increasing RPH.`;
         }
       }
